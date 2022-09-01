@@ -21,6 +21,7 @@ const routes = routerOptions.map(r => {
         ...r,
         component: () =>
                 import(/* webpackChunkName: "[request]" */ `@/views/${r.name}/Index.vue`)
+                // importa ese componente en esa ruta, corresponde al nombre de la carpeta de r.name
     }
 })
 

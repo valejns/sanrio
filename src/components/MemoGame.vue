@@ -51,6 +51,9 @@ export default {
         }
     },
     computed: {
+        },
+        mounted() {
+            console.log('hola');
         }
 }
 </script>
