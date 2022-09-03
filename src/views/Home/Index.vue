@@ -5,7 +5,7 @@
     <button @click= "openLink('/quiz')" class="button">Quiz</button>
     <button @click= "openLink('/memorama')" class="button">Memorama</button>
     </nav>
-    <div>
+    <div class="logo">
     <img src="@/assets/logo.svg"/>
     </div>
   </div>
@@ -27,5 +27,8 @@ nav{
   display: flex;
   justify-content:space-evenly;
   align-items: center;
+}
+.logo{
+  width: 50%;
 }
 </style>
