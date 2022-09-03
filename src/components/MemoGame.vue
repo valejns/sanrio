@@ -3,24 +3,25 @@
         <div class= 'area-tarjeta'>
             <div class="tarjetas" v-for="card in cards" :key="card.id">
                     <img class="backCard"
-                    @click="turn(card.id, card.turned, card.matched)"
-                    :src="card.turned 
+                    @click="card.matched ? false :turn(card.id, card.turned)"
+                    :src="card.turned || card.matched
                     ? require(`../assets/${card.idPares}.svg`) 
                     : require(`../assets/trasera.jpg`)">
                 </div>
+            <button @onclick="shuffle(cards)">Volver a jugar</button>
         </div>
     </div>
 </template>
 
 <script>
-
-export default {
-    name: 'MemoGame',
-
-    data() {
-        return {
-            backcard: {img: '@/assets/trasera.jpg', turned: true},
-            cards: [
+    
+    export default {
+        name: 'MemoGame',
+        
+        data() {
+            return {
+                backcard: {img: '@/assets/trasera.jpg', turned: true},
+                cards: [
                 {id: 1, idPares: 1, turned:false, matched: false},
                 {id: 2, idPares: 1, turned:false, matched: false},
                 {id: 3, idPares: 2, turned:false, matched: false},
@@ -33,12 +34,15 @@ export default {
                 {id: 10, idPares: 5, turned:false, matched: false},
                 {id: 11, idPares: 6, turned:false, matched: false},
                 {id: 12, idPares: 6, turned:false, matched: false}],
-
-            memoryCard: []
-    };
-},
-    methods: {
-        turn(id, estadoActual, match){
+                
+                memoryCard: []
+            };
+        },
+        methods: { 
+            shuffle(cards) {
+                cards.sort(()=> Math.random() - 0.5)
+            },
+            turn(id, estadoActual) {
             if(this.memoryCard.length < 2) {
                 //nuevo array con la condicion de que id sea igual al id clickeado
                 this.cards = this.cards.map(card => {
@@ -49,12 +53,12 @@ export default {
                     //si el memorycard es mayor a 0
                     if(this.memoryCard.length > 0) {
                         //si card es true y si en el index 0 de la memory.id no es el clickeado
-                        if(card.turned && this.memoryCard[0].id !== card.id ){
+                        if(card.turned && this.memoryCard[0].id !== card.id && !card.matched){
                             this.memoryCard.push(card)
                         }
                     }else{
                         //si es true
-                        if(card.turned){
+                        if(card.turned && !card.matched){
                             this.memoryCard.push(card)
                         }
                     }
@@ -64,11 +68,12 @@ export default {
             setTimeout(() => {
                 if(this.memoryCard.length === 2){
                     //si index 0 y 1 son iguales
-                    if(this.memoryCard[0].idPares === this.memoryCard[1].idPares){
-                        this.memoryCard.matched = !match
-                    //filtra si idpares no es igual a idpares del index 0
-                        this.cards = this.cards.filter(card=> card.idPares !== this.memoryCard[0].idPares)
-                        // this.cards = this.cards.map (card => )
+                    if(this.memoryCard[0].idPares === this.memoryCard[1].idPares) {
+                        this.cards = this.cards.map(card => {if (this.memoryCard[0].idPares === card.idPares) {
+                        card.matched = true
+                    }
+                        return card})
+
                         this.memoryCard = []
                     }
                     else{
@@ -81,13 +86,11 @@ export default {
                 }   
             }, 1000);
         }
- 
-    },  
-    computed: {
-        },
-        mounted() {
-            console.log('hola');
-        }
+    },
+
+    mounted() {
+        this.shuffle(this.cards)
+    }
 }
 </script>
 
@@ -98,8 +101,9 @@ export default {
 }
 .backCard, .turnedCard{
     display: inline-block;
-    width: 400px;
-    height: 130px;
+    width: 300px;
+    height: 150px;
+    background-color: #fff;
 
 }
 
