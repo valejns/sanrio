@@ -8,7 +8,7 @@
                     ? require(`../assets/${card.idPares}.svg`) 
                     : require(`../assets/trasera.jpg`)">
                 </div>
-            <button @onclick="shuffle(cards)">Volver a jugar</button>
+            <button @click="shuffle()">Volver a jugar</button>
         </div>
     </div>
 </template>
@@ -21,7 +21,14 @@
         data() {
             return {
                 backcard: {img: '@/assets/trasera.jpg', turned: true},
-                cards: [
+                cards: [],
+                
+                memoryCard: []
+            };
+        },
+        methods: {
+            shuffle() {
+                this.cards = [
                 {id: 1, idPares: 1, turned:false, matched: false},
                 {id: 2, idPares: 1, turned:false, matched: false},
                 {id: 3, idPares: 2, turned:false, matched: false},
@@ -33,14 +40,8 @@
                 {id: 9, idPares: 5, turned:false, matched: false},
                 {id: 10, idPares: 5, turned:false, matched: false},
                 {id: 11, idPares: 6, turned:false, matched: false},
-                {id: 12, idPares: 6, turned:false, matched: false}],
-                
-                memoryCard: []
-            };
-        },
-        methods: { 
-            shuffle(cards) {
-                cards.sort(()=> Math.random() - 0.5)
+                {id: 12, idPares: 6, turned:false, matched: false}]
+                this.cards.sort(()=> Math.random() - 0.5)
             },
             turn(id, estadoActual) {
             if(this.memoryCard.length < 2) {
@@ -89,7 +90,7 @@
     },
 
     mounted() {
-        this.shuffle(this.cards)
+        this.shuffle()
     }
 }
 </script>
