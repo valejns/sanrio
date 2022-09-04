@@ -10,9 +10,14 @@ export default {
 </script>
 
 <style>
-html, body{
+html{
   margin: 0;
   padding: 0;
-  background-color:#e8a8db;
+  background:rgb(248, 189, 213);
 }
+@font-face{
+  font-family: 'Odin Rounded';
+  src: local(Odin Rounded);
+}
+
 </style>

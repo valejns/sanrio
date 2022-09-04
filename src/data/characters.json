@@ -1,56 +1,56 @@
 [{
     "name": "Hello Kitty",
-    "image": ""
+    "image": "kitty"
 },
 {
     "name": "My Melody",
-    "image": ""
+    "image": "melody"
 },
 {
     "name": "Chococat",
-    "image": ""
+    "image": "chococat"
 },
 {
     "name": "Cinnamorroll",
-    "image": ""
+    "image": "cina"
 },
 {
     "name": "Kuromi",
-    "image": ""
+    "image": "kuromi"
 },
 {
     "name": "Kiki & Lala",
-    "image": ""
+    "image": "angels"
 },
 {
     "name": "Keroppi",
-    "image": ""
+    "image": "keroppi"
 },
 {
     "name": "Pochacco",
-    "image": ""
+    "image": "pochacco"
 },
 {
     "name": "Purin",
-    "image": ""
+    "image": "purin"
 },
 {
     "name": "Badtz-maru",
-    "image": ""
+    "image": "badtz"
 },
 {
     "name": "Gudetama",
-    "image": ""
+    "image": "gude"
 },
 {
     "name": "Pekkle",
-    "image": ""
+    "image": "pekkle"
 },
 {
     "name": "Tuxedosam",
-    "image": ""
+    "image": "tuxedo"
 },
 {
     "name": "Aggretsuko",
-    "image": ""
+    "image": "aggre"
 }]

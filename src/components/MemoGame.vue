@@ -2,25 +2,26 @@
     <div class= 'tablero'>
         <div class= 'area-tarjeta'>
             <div class="tarjetas" v-for="card in cards" :key="card.id">
-                    <img class="backCard"
+                    <img class="Card"
                     @click="card.matched ? false :turn(card.id, card.turned)"
                     :src="card.turned || card.matched
                     ? require(`../assets/${card.idPares}.svg`) 
-                    : require(`../assets/trasera.jpg`)">
+                    : require(`../assets/trasera.svg`)">
                 </div>
-            <button @click="shuffle()">Volver a jugar</button>
+        </div>
+        <div class="button">
+        <button @click="shuffle()">Volver a jugar</button>
         </div>
     </div>
 </template>
 
 <script>
-    
     export default {
         name: 'MemoGame',
         
         data() {
             return {
-                backcard: {img: '@/assets/trasera.jpg', turned: true},
+                backcard: {turned: true},
                 cards: [],
                 
                 memoryCard: []
@@ -96,16 +97,40 @@
 </script>
 
 <style scoped>
+.area-tarjeta{
+    padding:5% 15%;
+    display: grid;
+    height: auto;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    background: rgba(100, 98, 98, 0.245);
+    row-gap: 2%;
+    justify-items: center
+}
 .tarjetas{
-    width:400px;
-    display: inline-block
-}
-.backCard, .turnedCard{
+    width:90%;
     display: inline-block;
-    width: 300px;
-    height: 150px;
     background-color: #fff;
+    border-radius: 10px;
 
 }
+ .Card{ 
+    /* display: inline-block; */
+    width: 100%; 
+    height: 150px;
+}  
 
+.button{
+    display: flex;
+    justify-content:center;
+}
+button{
+    margin-top: 1%;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    font-family: 'Odin Rounded';
+    font-size: 2px;
+    color: #fff;
+}
 </style>

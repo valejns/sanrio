@@ -1,0 +1,63 @@
+[{
+   "pregunta": "Hello Kitty siempre ha sido muy familiar. Le encanta pasar el rato con su familia y compartir juegos con su hermana. ¿Sabrías decirme cómo se llaman la mamá y el papá de Hello Kitty?",
+   "r1" : "George Blank y Mary Blank",
+   "r2" : "George White y Mary White",
+   "r3" : "John White y Mary White",
+   "r4" : "George Washington y Mary Ann"
+},
+{
+    "pregunta": "Charmy Kitty es una gatita muy parecida a Hello Kitty. ¿Sabes quién es en realidad?",
+    "r1" : "Es Mimmy, la hermanita de Hello Kitty",
+    "r2" : "Es una gatita que se encontró por la calle",
+    "r3" : "Es una gatita que el papá de Hello Kitty le regaló",
+    "r4" : "Es la prima de Hello Kitty"
+ },
+ {
+    "pregunta": "Hay alguien que quiere ser el novio de Hello Kitty. ¿Podrías decirnos qué personaje es?",
+    "r1" : "El osito Tippy",
+    "r2" : "Keroppi",
+    "r3" : "Kiki, uno de los mellizos",
+    "r4" : "Deery-Lou"
+ },
+ {
+    "pregunta": "My Melody es una amiga muy especial de Hello Kitty. Nació en el bosque de Maryland y es una conejita encantadora. ¿Sabes quién es su rival?",
+    "r1" : "Chococat, porque es negro y My Melody blanca.",
+    "r2" : "My Melody no tiene rival",
+    "r3" : "Kuromi, la eterna enemiga de My Melody",
+    "r4" : "Charmy Kitty"
+ },
+ {
+    "pregunta": "Próximamente será el cumpleaños de Hello Kitty. ¿Sabes qué día es?",
+    "r1" : "El 1 de noviembre",
+    "r2" : "El 6 de junio",
+    "r3" : "El 25 de diciembre",
+    "r4" : "El 1 de enero"
+ },
+ {
+    "pregunta": "Chococat es un gatito muy olvidadizo, amiguito de Hello Kitty. ¿Sabes de dónde viene su nombre?",
+    "r1" : "Le pusieron así porque es un gato de chocolate",
+    "r2" : "Por su nariz color chocolate",
+    "r3" : "Porque le gustan mucho los chocolates",
+    "r4" : "Porque es un gato marrón"
+ },
+ {
+    "pregunta": "¿Cómo se llaman los mellizos que van repartiendo felicidad con su varita mágica?",
+    "r1" : "Lali y Kaki",
+    "r2" : "Pili y Mili",
+    "r3" : "Karl y Mark",
+    "r4" : "Kiki y Lala"
+ },
+ {
+    "pregunta": "Keroppi es otro de los amigos de Hello Kitty. ¿Sabrías decirnos qué animal es?",
+    "r1" : "Un perrito",
+    "r2" : "Un saltamontes",
+    "r3" : "Una ranita",
+    "r4" : "Un conejito"
+ },
+ {
+    "pregunta": "Hay una compañía aérea que ha transformado un avión exclusivamente de Hello Kitty. ¿Sabes cuál es?",
+    "r1" : "Eva Airways", 
+    "r2" : "Kitty Airways",
+    "r3" : "Hello Kitty Airplane", 
+    "r4" : "Japan Airways" 
+ }]

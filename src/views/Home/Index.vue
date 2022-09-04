@@ -5,8 +5,8 @@
     <button @click= "openLink('/quiz')" class="button">Quiz</button>
     <button @click= "openLink('/memorama')" class="button">Memorama</button>
     </nav>
-    <div class="logo">
-    <img src="@/assets/logo.svg"/>
+    <div class="logo-container">
+    <img class="logo" src="@/assets/logo.svg"/>
     </div>
   </div>
 </template>
@@ -22,13 +22,30 @@
 }
 </script>
 
-<style>
+<style scoped>
 nav{
   display: flex;
   justify-content:space-evenly;
   align-items: center;
 }
-.logo{
-  width: 50%;
+.button {
+  margin-top: 1%;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  font-family: 'Odin Rounded';
+  font-size: 23px;
+  color: #fff;
 }
+.logo-container{
+  width: 50%;
+
+  display:block;
+  margin:auto;
+  margin-top: 3%;
+}
+ 
 </style>

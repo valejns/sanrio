@@ -1,11 +1,43 @@
 <template>
     <div>
-        
+        <NavBar/>
+        <div class="container">
+            <div class="card" v-for="character of characters" :key="character.name">
+                <img class="character" :src="require(`@/assets/${character.image}.svg`) "/>
+                <p class="name">{{character.name}}</p>
+            </div>
+        </div>
     </div>
 </template>
 
 <script>
+    import characters from '@/data/characters.json'
+    import NavBar from '@/components/NavBar.vue';
     export default {
-        name: 'SanrioDex'
-    }
+    name: "SanrioDex",
+    data() {
+        return {
+            characters: characters
+        };
+    },
+    components: { NavBar }
+}
 </script>
+<style scoped>
+.container {
+    padding: 2% 10%;
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+}
+.card{
+    width: 65%;
+    margin: 0;
+    padding: 10px;
+    /* background-color:#fff; */
+    border-radius: 15px;
+    filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
+}
+.name {
+    text-align: center;
+}
+</style>
