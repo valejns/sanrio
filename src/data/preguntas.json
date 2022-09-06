@@ -1,0 +1,63 @@
+[{
+   "pregunta": "Hello Kitty siempre ha sido muy familiar. Le encanta pasar el rato con su familia y compartir juegos con su hermana. ¿Sabrías decirme cómo se llaman la mamá y el papá de Hello Kitty?",
+   "rtas" : [{"rta":"George Blank y Mary Blank", "points": 0},
+   {"rta":"George White y Mary White", "points": 1},
+   {"rta":"John White y Mary White", "points": 0},
+   {"rta":"George Washington y Mary Ann", "points": 0}]
+}, 
+{
+    "pregunta": "Charmy Kitty es una gatita muy parecida a Hello Kitty. ¿Sabes quién es en realidad?",
+    "rtas" : [{"rta":"Es Mimmy, la hermanita de Hello Kitty", "points": 0},
+   {"rta":"Es una gatita que se encontró por la calle", "points": 0},
+   {"rta":"Es una gatita que el papá de Hello Kitty le regaló", "points": 1},
+   {"rta":"Es la prima de Hello Kitty", "points": 0}]
+ },
+ {
+    "pregunta": "Hay alguien que quiere ser el novio de Hello Kitty. ¿Podrías decirnos qué personaje es?",
+    "rtas" : [{"rta":"El osito Tippy", "points": 1},
+    {"rta":"Keroppi", "points": 0},
+    {"rta":"Kiki, uno de los mellizos", "points": 0},
+    {"rta":"Deery-Lou", "points": 0}]
+ },
+ {
+    "pregunta": "My Melody es una amiga muy especial de Hello Kitty. Nació en el bosque de Maryland y es una conejita encantadora. ¿Sabes quién es su rival?",
+    "rtas" : [{"rta":"Chococat, porque es negro y My Melody blanca.", "points": 0},
+    {"rta":"My Melody no tiene rival", "points": 0},
+    {"rta":"Kuromi, la eterna enemiga de My Melody", "points": 1},
+    {"rta":"Charmy Kitty", "points": 0}]
+ },
+ {
+    "pregunta": "Próximamente será el cumpleaños de Hello Kitty. ¿Sabes qué día es?",
+    "rtas" : [{"rta":"El 1 de noviembre", "points": 1},
+    {"rta":"El 6 de junio", "points": 0},
+    {"rta":"El 25 de diciembre", "points": 0},
+    {"rta":"El 1 de enero", "points": 0}]
+ },
+ {
+    "pregunta": "Chococat es un gatito muy olvidadizo, amiguito de Hello Kitty. ¿Sabes de dónde viene su nombre?",
+    "rtas" : [{"rta":"Le pusieron así porque es un gato de chocolate", "points": 0},
+    {"rta":"Por su nariz color chocolate", "points": 1},
+    {"rta":"Porque le gustan mucho los chocolates", "points": 0},
+    {"rta":"Porque es un gato marrón", "points": 0}]
+ },
+ {
+    "pregunta": "¿Cómo se llaman los mellizos que van repartiendo felicidad con su varita mágica?",
+    "rtas": [ {"rta":"Lali y Kaki", "points": 0},
+    {"rta":"Pili y Mili", "points": 0},
+    {"rta":"Karl y Mark", "points": 0},
+    {"rta":"Kiki y Lala", "points": 1}]
+ },
+ {
+    "pregunta": "Keroppi es otro de los amigos de Hello Kitty. ¿Sabrías decirnos qué animal es?",
+    "rtas" : [{"rta":"Un perrito", "points": 0},
+    {"rta":"Un saltamontes", "points": 0},
+    {"rta":"Una ranita", "points": 1},
+    {"rta":"Un conejito", "points": 0}]
+ },
+ {
+    "pregunta": "Hay una compañía aérea que ha transformado un avión exclusivamente de Hello Kitty. ¿Sabes cuál es?",
+    "rtas" : [{"rta":"Eva Airways",  "points": 1},
+    {"rta":"Kitty Airways", "points": 0},
+    {"rta":"Hello Kitty Airplane", "points": 0},
+    {"rta":"Japan Airways",  "points": 0}]
+ }]
