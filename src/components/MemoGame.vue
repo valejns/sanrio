@@ -1,13 +1,13 @@
 <template>
-    <div class= 'tablero'>
-        <div class= 'area-tarjeta'>
-            <div class="tarjetas" v-for="card in cards" :key="card.id">
-                    <img class="Card"
-                    @click="card.matched ? false :turn(card.id, card.turned)"
+    <div class= 'board'>
+        <div class= 'cards-area'>
+            <div class="cards" v-for="card in cards" :key="card.id">
+                    <img class="card"
+                    @click="card.matched ? false : turn(card.id, card.turned)"
                     :src="card.turned || card.matched
                     ? require(`../assets/${card.idPares}.svg`) 
                     : require(`../assets/trasera.svg`)">
-                </div>
+            </div>
         </div>
         <div class="button">
         <button @click="shuffle()">Volver a jugar</button>
@@ -45,7 +45,7 @@
                 this.cards.sort(()=> Math.random() - 0.5)
             },
             turn(id, estadoActual) {
-            if(this.memoryCard.length < 2) {
+                if(this.memoryCard.length < 2) {
                 //nuevo array con la condicion de que id sea igual al id clickeado
                 this.cards = this.cards.map(card => {
                     if(card.id === id){
@@ -66,28 +66,32 @@
                     }
                     return card
                 })
+                }
+                setTimeout(() => {
+                    if(this.memoryCard.length === 2){
+                        //si index 0 y 1 son iguales
+                        if(this.memoryCard[0].idPares === this.memoryCard[1].idPares) {
+                            //mapeo si index 0 idp es igual a idp de la carta
+                            this.cards = this.cards.map(card => {if (this.memoryCard[0].idPares === card.idPares) {
+                                //le cambia el valor de matched
+                            card.matched = true
+                        }
+                            return card})
+                            //se limpia el array
+                            this.memoryCard = []
+                        }
+                        else{
+                            //mapeo para q se vuelvan a dar vuelta
+                            this.cards = this.cards.map(card=> {
+                                card.turned = false
+                                return card
+                            })
+                            //se limpia el array
+                            this.memoryCard = []
+                        }
+                    }   
+                }, 300);
             }
-            setTimeout(() => {
-                if(this.memoryCard.length === 2){
-                    //si index 0 y 1 son iguales
-                    if(this.memoryCard[0].idPares === this.memoryCard[1].idPares) {
-                        this.cards = this.cards.map(card => {if (this.memoryCard[0].idPares === card.idPares) {
-                        card.matched = true
-                    }
-                        return card})
-
-                        this.memoryCard = []
-                    }
-                    else{
-                        this.cards = this.cards.map(card=> {
-                            card.turned = false
-                            return card
-                        })
-                        this.memoryCard = []
-                    }
-                }   
-            }, 1000);
-        }
     },
 
     mounted() {
@@ -97,23 +101,28 @@
 </script>
 
 <style scoped>
-.area-tarjeta{
-    padding:5% 15%;
+.cards-area{
+    margin:0 5%;
+    border-radius: 30px;
+    padding:5% 10%;
     display: grid;
     height: auto;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    background: rgba(100, 98, 98, 0.245);
+    background: rgba(247, 247, 247, 0.245);
     row-gap: 2%;
     justify-items: center
 }
-.tarjetas{
+.cards{
     width:90%;
     display: inline-block;
     background-color: #fff;
     border-radius: 10px;
-
+    cursor: pointer;
 }
- .Card{ 
+.cards:hover{
+    transform: scale(1.02);
+}
+ .card{ 
     /* display: inline-block; */
     width: 100%; 
     height: 150px;
@@ -125,12 +134,14 @@
 }
 button{
     margin-top: 1%;
-    background-color: transparent;
+    background-color: #f94f4f;
     border: none;
+    border-radius: 10px ;
     cursor: pointer;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: 'Odin Rounded';
-    font-size: 2px;
+    font-size: 20px;
     color: #fff;
+    padding: 1%;
 }
 </style>

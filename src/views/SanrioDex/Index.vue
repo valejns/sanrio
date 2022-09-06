@@ -1,9 +1,9 @@
 <template>
     <div>
-        <NavBar/>
+        <BackHome/>
         <div class="container">
             <div class="card" v-for="character of characters" :key="character.name">
-                <img class="character" :src="require(`@/assets/${character.image}.svg`) "/>
+                <img class="character" :src="require(`@/assets/${character.image}.svg`)"/>
                 <p class="name">{{character.name}}</p>
             </div>
         </div>
@@ -12,22 +12,26 @@
 
 <script>
     import characters from '@/data/characters.json'
-    import NavBar from '@/components/NavBar.vue';
+    import BackHome from '@/components/BackHome.vue';
     export default {
     name: "SanrioDex",
     data() {
         return {
-            characters: characters
+            characters: characters,
         };
     },
-    components: { NavBar }
+    components: {
+        BackHome
+    },
 }
+ 
 </script>
 <style scoped>
 .container {
     padding: 2% 10%;
     display: grid; 
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr))
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-items: center;
 }
 .card{
     width: 65%;
@@ -39,5 +43,17 @@
 }
 .name {
     text-align: center;
+    font-family: 'Odin Rounded';
+}
+.filter{
+    margin: 0 auto;
+    display: block;
+    width: 20%;
+    border: none;
+    padding: 5px 20px;
+    outline: none;
+    background: #f4f4f4;
+    font-size: 16px;
+    border-radius: 20px;
 }
 </style>

@@ -1,14 +1,15 @@
 <template>
 <div>
-    <NavBar/>
-    <p>hola</p>
+    <BackHome/>
+    <QuizGame/>
 </div>
 </template>
 
 <script>
-import NavBar from '@/components/NavBar.vue';
+import QuizGame from '@/components/QuizGame.vue'
+import BackHome from '@/components/BackHome.vue';
 export default {
-    name: "QuizGame",
-    components: { NavBar }
+    name: "QGame",
+    components: { BackHome, QuizGame }
 }
 </script>

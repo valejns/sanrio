@@ -6,7 +6,7 @@
     <button @click= "openLink('/memorama')" class="button">Memorama</button>
     </nav>
     <div class="logo-container">
-    <img class="logo" src="@/assets/logo.svg"/>
+    <img class="logo" src="@/assets/inicio.svg"/>
     </div>
   </div>
 </template>
@@ -40,12 +40,18 @@ nav{
   font-size: 23px;
   color: #fff;
 }
+.button:hover{
+  transform: scale(1.2);
+}
 .logo-container{
-  width: 50%;
-
+  width: 60%;
   display:block;
   margin:auto;
   margin-top: 3%;
+  transition: transform .2s
+}
+.logo-container:hover{
+  transform: scale(1.1);
 }
  
 </style>

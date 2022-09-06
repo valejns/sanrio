@@ -1,19 +1,19 @@
 <template>
  <div>
-    <NavBar/>
+    <BackHome/>
     <MemoGame/>
  </div>
 </template>
 
 <script>
 import MemoGame from '@/components/MemoGame.vue'
-import NavBar from '@/components/NavBar.vue';
+import BackHome from '@/components/BackHome.vue';
 
 export default {
     name: 'memoramaGame',
     components: {
     MemoGame,
-    NavBar
+    BackHome
 }
 }
 </script>

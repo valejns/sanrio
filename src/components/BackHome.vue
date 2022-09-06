@@ -24,6 +24,10 @@ nav{
 .logo{
     width: 13%;
     cursor: pointer;
+    transition: transform .3s;
+}
+.logo:hover{
+  transform: scale(1.1);
 }
 /* .button {
   margin-top: 1%;
