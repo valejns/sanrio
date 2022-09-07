@@ -84,7 +84,8 @@ export default{
     cursor: pointer;
     font-size: 18px;
     padding: 15px 20px;
-    margin: 10px
+    margin: 10px; 
+    width:100%;
 
 
 }

@@ -41,6 +41,9 @@
     border-radius: 15px;
     filter: drop-shadow(7px 7px 4px rgba(0, 0, 0, 0.25));
 }
+.card:hover{
+    transform: scale(1.02);
+}
 .name {
     text-align: center;
     font-family: 'Odin Rounded';
